@@ -1,2 +1,0 @@
-# joshfw.github.io
-Website
