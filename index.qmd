@@ -1,5 +1,18 @@
 ---
-title: "joshfw.github.io"
+title: "Joshua Fawcett Weiner"
+about:
+  id: hero-heading
+  template: jolla
+  image: profile.jpg 
+  image-shape: rounded
+  image-width: 18em
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/FawcettWeiner
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/joshua-fawcett-weiner-21542b58/
 ---
 
 This is a Quarto website.
