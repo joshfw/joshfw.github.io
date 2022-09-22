@@ -2,10 +2,10 @@
 title: "Joshua Fawcett Weiner"
 about:
   id: hero-heading
-  template: jolla
+  template: trestles
   image: profile.jpg 
   image-shape: rounded
-  image-width: 18em
+  image-width: 15em
   links:
     - icon: twitter
       text: Twitter
@@ -17,9 +17,7 @@ about:
       text: Email
       href: mailto:j.weiner@alumni.ubc.ca
 ---
-
 :::{#hero-heading}
-
 ## About Me
 
 I'm a Ph.D. Candidate in the [Department of Political Science](https://politics.ubc.ca/) at the University of British Columbia (UBC) in Vancouver, Canada. My work bridges international relations and comparative politics, with a substantive focus on the internal dynamics of armed groups. My research interests include political violence, international security, and conflict processes. 
