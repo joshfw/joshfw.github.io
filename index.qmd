@@ -13,7 +13,7 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/joshua-fawcett-weiner-21542b58/
-    - icon: email
+    - icon: mail
       text: Email
       href: mailto:j.weiner@alumni.ubc.ca
 ---
