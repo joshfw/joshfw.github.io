@@ -13,11 +13,11 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/joshua-fawcett-weiner-21542b58/
-    - icon: mail
+    - icon: fa-envelope
       text: Email
       href: mailto:j.weiner@alumni.ubc.ca
     - text: CV
-      href: https://www.dropbox.com/s/9qrv9oicfdb65so/CV_Joshua_Fawcett_Weiner%20%281%29.pdf?dl=0 
+      href: https://www.dropbox.com/s/njueet85pn8e36k/CV_Joshua_Fawcett_Weiner.pdf?dl=0 
 ---
 
 ::: {#hero-heading}
