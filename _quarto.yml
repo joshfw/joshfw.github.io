@@ -3,16 +3,23 @@ project:
   output-dir: docs
 
 website:
-  title: "joshfw.github.io"
+  title: "Joshua Fawcett Weiner"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: Research
+      - href: teaching.qmd
+        text: Teaching
+      - href: cv.qmd
+        text: CV
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: sandstone
+      dark: slate
     css: styles.css
     toc: true
 
