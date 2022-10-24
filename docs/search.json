@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Please find the latest copy of my CV here"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Joshua Fawcett Weiner",
+    "section": "",
+    "text": "Twitter\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n  \n     CV\n  \n\n  \n  \n\n\nI’m a Ph.D. Candidate in the Department of Political Science at the University of British Columbia (UBC) in Vancouver, Canada. My work bridges international relations and comparative politics, with a substantive focus on the internal dynamics of armed groups. My research interests include political violence, international security, and conflict processes.\nMy dissertation, Running a Rebellion: Essays on Insurgent Leader Selection, Violence, and Institutional Change, asks: why are certain types of rebel leaders selected and to what extent do they affect the organizations they lead? To answer this question, I employ an array of quantitative and qualitative methods, including design-based causal inference, original data, and process-tracing of media and archival data. My work demonstrates that resource wealth systematically impacts the variation in the type of leader rebel groups select, and that assassinating rebel leaders produces sustained negative effects on the violent behavior of the group. However, I find that assassination does not necessarily reduce overall levels of violence in a conflict or change the institutions of the militant group.\nI have received generous financial support from Canada’s Social Sciences and Humanities Research Council (SSHRC), UBC, and York University.\nFeel free to contact me at j.weiner@alumni.ubc.ca for more information about my research or teaching. I’m also on Twitter."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "“Changing the Guard: Rebel Leadership Transitions in Syria” – Submitted\nIntuitively, leadership should matter in civil wars, but there is little evidence regarding how and why it matters. Yet, governments regularly target militant leaders (Jordan 2019, 4), and 90 percent of rebel groups possess a clear central command that exerts a moderate to a high amount of control over the group’s constituent parts (Prorok 2016, 72–73). Existing scholarship indicates that variation in rebel institutions impacts patterns of rebel group violence, but little work has been done on the interplay between rebel leaders, the institutions of the groups they lead, and leaders’ impact on conflict dynamics.\nI propose a novel theoretical framework and examine whether leadership change can affect the violent conduct of rebel groups using updated original data on assassination attempts of rebel leaders during the Syrian civil war. The relationship between rebel leaders and insurgent group violence is tested on 15 of the largest rebel groups in Syria’s civil war using a quantitative design that leverages variation in insurgent group violence, as well as leadership transitions within insurgent groups. Following Jones and Olken (2009) and Johnston (2012), I exploit the inherent randomness of the success or failure of assassination attempts to identify the causal effect of rebel leadership removal on insurgent group violence. I find that assassination attempts reduce rebel group violence, but only when senior leaders are targeted, not mid-level officials. Importantly, successful attempts degrade groups, but do not reduce overall levels of violence in the conflict.\n“Resources and Rebel Leader Selection” – In Preparation\nHow do rebel groups choose their leader? Recent scholarship demonstrates rebel leaders affect militant alliances (Blair et al. 2021) and foreign funding (Huang et al. 2021), but comparatively little is known about whether or why armed groups choose specific types of leaders. Building on work that links resource endowments to the behaviour of rebel groups (Blair et al. 2021), I hypothesize that resource wealth conditions rebel leader selection. For militant groups to survive without resource wealth or external support they need to rely on pre-existing networks to recruit combatants (Weinstein 2005). Consequently, insurgent groups with more economic power, that do not face this constraint, should exhibit more systematic variation in the type of leader they select. Relatedly, wealthier groups should be able to recruit leaders with greater combat experience.\nI employ a two-stage analysis to empirically test my theory of insurgent leader selection. First, I examine whether militant groups without economic endowments are more likely to select more ideological or religious leaders. I measure economic endowments as the lack of oil and lootable resources, and I use data from the Rebel Organization Leaders (ROLE) Database, which covers active conflicts between 1980 and 2011. These data are supplemented by original data on leader ideology. Then, I leverage commodity price shocks as a natural experiment to analyze how fluctuations in insurgent group income impact rebel leader selection and replacement for the subset of groups with resources. I find that there is more variation in rebel leader type when insurgent groups have access to oil and lootable resources. This paper specifies how variation in rebel leadership is partially conditional on the insurgency’s resources, explicitly modelling selection effects we often do not account for in the study of insurgent organizations.\n“Gender in International Field Bureaucracies” with Katharina Coleman, Jessica Di Salvatore and Kseniya Oksamytna (equal contribution) – Under Review\nInternational bureaucracies that work in ‘the field’ are gendered in several distinctive ways. Building on interviews, archival materials, and memoirs, we conceptualize five characteristics of international field bureaucracies that contribute to this gendering: working in a ‘social bubble’; engagement in ‘virtuous’ and fast-paced work; perceptions of a hostile local environment; legacies of male preponderance; and the effect of non-family duty stations. These characteristics contribute to gendered protectionism, gender typecasting, and a ‘leaky management pipeline’. To demonstrate the effects of such gender dynamics, we use staff data to show that women in UN field offices and missions are not only underrepresented but on average have lower status and less job security than men. Furthermore, we use four internal surveys of UN international field staff to examine how gender affects international bureaucrats’ workplace experiences. Female staff report worse perceptions than men in terms of supervision, feedback, and support they receive."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Issues in International Conflict Management: Intrastate Conflict – Summer 2022 (UBC, Undergraduate)"
+  },
+  {
+    "objectID": "teaching.html#teaching-assistant",
+    "href": "teaching.html#teaching-assistant",
+    "title": "Teaching",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant\n\nInternational Relations and Professional Development\nProfessional Skills in Political Science – Spring 2022 (UBC, Undergraduate)\nSecurity Studies – Spring 2021 (UBC, Undergraduate)\n\n\nPolitical Methodology\nQuantitative Techniques of Political Analysis – Fall 2020 (UBC, Graduate)\nIntroduction to Scientific Political Analysis – Spring 2020 (UBC, Undergraduate)\nQuantitative Methods in Political Science – Fall 2018 (UBC, Undergraduate)"
+  },
+  {
+    "objectID": "teaching.html#guest-lectures",
+    "href": "teaching.html#guest-lectures",
+    "title": "Teaching",
+    "section": "Guest Lectures",
+    "text": "Guest Lectures\nSecurity Studies – Fall 2022 (UBC, Undergraduate)\nProfessional Skills in Political Science – Spring 2022 (UBC, Undergraduate)"
+  },
+  {
+    "objectID": "teaching.html#training",
+    "href": "teaching.html#training",
+    "title": "Teaching",
+    "section": "Training",
+    "text": "Training\nEquity, Diversity and Inclusion in Teaching – September 2022 from the UBC Equity & Inclusion Office\nInstructional Skills Workshop – April-May 2022 from the Centre for Teaching, Learning & Technology, UBC"
+  }
+]
