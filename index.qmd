@@ -17,7 +17,7 @@ about:
       text: Email
       href: mailto:j.weiner@alumni.ubc.ca
     - text: CV
-      href: https://www.dropbox.com/s/njueet85pn8e36k/CV_Joshua_Fawcett_Weiner.pdf?dl=0 
+      href: https://www.dropbox.com/s/zm7f7gejs76f7ea/CV_Joshua_Fawcett_Weiner.pdf?dl=0 
 ---
 
 ::: {#hero-heading}
