@@ -10,22 +10,25 @@ about:
     - icon: twitter
       text: Twitter
       href: https://twitter.com/FawcettWeiner
+    - icon: bluesky
+      text: BlueSky
+      href: https://bsky.app/profile/fawcettweiner.bsky.social
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/joshua-fawcett-weiner-21542b58/
+      href: https://www.linkedin.com/in/joshua-fawcett-weiner-21542b58
     - icon: fa-envelope
       text: Email
       href: mailto:j.weiner@alumni.ubc.ca
     - text: CV
-      href: https://www.dropbox.com/s/ryjha21x2zhybfh/CV_Joshua_Fawcett_Weiner.pdf?dl=0 
+      href: https://www.dropbox.com/scl/fi/byy5szr4unq0yaxg60ocy/CV_JFawcettWeiner.pdf?rlkey=cdbtnlz07xoprpjwakme018hp&st=x1t1fx4d&dl=0
 ---
 
 ::: {#hero-heading}
-## About Me
+## About 
 
-I'm a Ph.D. Candidate in the [Department of Political Science](https://politics.ubc.ca/) at the University of British Columbia (UBC) in Vancouver, Canada. My work bridges international relations and comparative politics, with a substantive focus on the internal dynamics of armed groups. My research interests include political violence, international security, and conflict processes.
+I'm a Postdoctoral Fellow at the Centre for International Conflict - Analysis and Management [(CICAM)](https://www.ru.nl/cicam/) at Radboud University's [Department of Political Science](https://www.ru.nl/en/departments/nijmegen-school-of-management/political-science). I received my Ph.D. in [Political Science](https://politics.ubc.ca/) from the University of British Columbia (UBC) in January 2024. Previously, I was a [Civil War Paths Fellow](https://www.civilwarpaths.org/) at the University of York's Centre for the Comparative Study of Civil War. 
 
-My dissertation, *Running a Rebellion: Essays on Insurgent Leader Selection, Violence, and Institutional Change*, asks: why are certain types of rebel leaders selected and to what extent do they affect the organizations they lead? To answer this question, I employ an array of quantitative and qualitative methods, including design-based causal inference, original data, and process-tracing of media and archival data. My work demonstrates that resource wealth systematically impacts the variation in the type of leader rebel groups select, and that assassinating rebel leaders produces sustained negative effects on the violent behavior of the group. However, I find that assassination does not necessarily reduce overall levels of violence in a conflict or change the institutions of the militant group.
+My work on political violence and conflict processes bridges international relations and comparative politics. My substantive focus is on the political economy of armed group adaptation and the impact of armed group leaders on organizational behavior. Much of my research is driven by two related questions: 1) how do armed groups determine the mix of funding strategies they use during conflict; and 2) how do armed group leaders, because of their past experiences or through networks, shape conflict dynamics. Geographically, I concentrate on the Global South, specifically the Middle East and Africa. I employ a variety of methods in my own and coauthored work including quasi-experiments, time series analysis, elite surveys, survey experiments, archival data, and natural language processing.
 
 I have received generous financial support from Canada's [Social Sciences and Humanities Research Council (SSHRC)](https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSD-BESCD_eng.asp), UBC, and York University.
 
