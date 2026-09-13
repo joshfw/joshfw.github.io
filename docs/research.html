@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -30,17 +30,21 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df479d6c4d77d0e0dfbcb5361179d7fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1a95413ce7875775f0026b5519a171c.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-acb86da7cc94e534617b9af23b514896.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-bae33c85dea990b555726d9e885fc0e5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-acb86da7cc94e534617b9af23b514896.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,13 +77,177 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Joshua Fawcett Weiner</span>
     </a>
@@ -126,9 +294,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#peer-reviewed-publications" id="toc-peer-reviewed-publications" class="nav-link active" data-scroll-target="#peer-reviewed-publications">Peer-Reviewed Publications</a></li>
   <li><a href="#working-papers" id="toc-working-papers" class="nav-link" data-scroll-target="#working-papers">Working Papers</a>
   <ul class="collapse">
-  <li><a href="#armed-group-leaders" id="toc-armed-group-leaders" class="nav-link" data-scroll-target="#armed-group-leaders">Armed Group Leaders</a></li>
   <li><a href="#political-economy-of-armed-groups" id="toc-political-economy-of-armed-groups" class="nav-link" data-scroll-target="#political-economy-of-armed-groups">Political Economy of Armed Groups</a></li>
-  <li><a href="#international-organizations" id="toc-international-organizations" class="nav-link" data-scroll-target="#international-organizations">International Organizations</a></li>
+  <li><a href="#international-organizations-aid-and-foreign-policy" id="toc-international-organizations-aid-and-foreign-policy" class="nav-link" data-scroll-target="#international-organizations-aid-and-foreign-policy">International Organizations, Aid, and Foreign Policy</a></li>
   </ul></li>
   <li><a href="#work-in-progress" id="toc-work-in-progress" class="nav-link" data-scroll-target="#work-in-progress">Work in Progress</a></li>
   </ul>
@@ -136,6 +303,7 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -158,425 +326,298 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="peer-reviewed-publications" class="level2">
 <h2 class="anchored" data-anchor-id="peer-reviewed-publications">Peer-Reviewed Publications</h2>
-<p><a href="https://www.dropbox.com/scl/fi/4uva977ymshbxyo28l8w0/JLD.pdf?rlkey=d7zp5y1mrcpoeqtu4vo93n8ir&amp;st=6tq96orx&amp;dl=0"><strong>Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset (JLD)</strong></a> with <a href="https://www.universiteitleiden.nl/en/staffmembers/maria-amjad">Maria Amjad</a>, <a href="https://www.markberlin2.com/">Mark Berlin</a>, <a href="https://www.hertie-school.org/en/research/faculty-and-researchers/profile/person/daub">Sara Daub</a>, and <a href="https://www.ilaydaonder.com/">Ilayda B. Onder</a> (equal contribution). <em>Journal of Peace Research</em>. Forthcoming.</p>
-<p>Recent research has explored how militant leaders’ backgrounds shape their decision-making while in power. However, existing studies primarily focus on leaders of rebel groups participating in civil wars, overlooking smaller, yet lethal and influential, armed groups that operate outside civil war contexts. To address this gap, we introduce the Jihadist Leaders Dataset (JLD), which provides original, systematic data on the backgrounds and pre-war experiences of 238 leaders from 110 jihadist organizations. The dataset covers organizations operating across Africa, Asia, and the Middle East between 1976 and 2023, capturing a broad range of actors that are central to contemporary conflicts. Drawing on Arabic, English, French, German, Turkish, and Urdu sources, we document biographical information on 31 leader-level variables, offering the potential for analyzing how jihadist leaders’ prior experiences shape their preferences and the behavior of the groups they command. We detail our data collection procedures and present descriptive statistics before illustrating the JLD’s utility through a quantitative analysis of the leader-level determinants of suicide bombings. The JLD advances research on militant leaders, jihadist actors, and the role of individual decision-makers in shaping conflict processes.</p>
+<p><strong>Changing the Guard: Rebel Leadership Targeting in Syria</strong>. <em>International Interactions</em> (conditionally accepted).</p>
+<p>This paper examines how leadership targeting affects the violent conduct of armed groups during civil war at the group-level as well as the conflict-level. Armed groups often possess a clear central command that exerts control over the group’s constituent parts, but there is conflicting evidence regarding the role of leaders and how armed groups respond to leadership strikes. At the group-level, I examine whether leadership change affects the battlefield efficacy of armed groups using original leadership strike data on armed groups during the Syrian civil war. At the conflict-level, I assess how the population of groups not subjected to a leadership strike change their behavior in response to successful attacks. I find that successful leadership strikes degrade groups by reducing their battlefield efficacy while also reducing overall levels of violence in the conflict in the short term. This points to risk aversion as an understudied mechanism in conflicts with multiple armed groups.</p>
+<p><a href="https://doi.org/10.1080/13698249.2026.2717960"><strong>Armed Group Extraction Strategies</strong></a>. 2026. <em>Civil Wars</em> 28 (2-3).</p>
+<p>Armed groups use many methods to meet their revenue needs. While some existing theory posits that resource rents preclude groups from taxing, empirically, some groups extract both resources and taxes. I argue that armed groups operate in a governance equilibrium and that their extraction strategies are not mutually exclusive or independent from one another. Instead, groups invest in extraction that offers the highest net marginal benefit. Using a cross-national quantitative design, I find that, counterintuitively, extracting resource rents leads groups to increase taxation in the future. Additionally, multiple extraction strategies lead groups to deepen their governance practices, though heterogeneity remains.</p>
+<p><a href="https://doi.org/10.1016/j.worlddev.2026.107524"><strong>Aid and Armed Actors: Cooperation and Aid Delivery in the DRC</strong></a> with <a href="https://haleyswedlund.com/">Haley Swedlund</a>, <a href="https://uniweb.uottawa.ca/view/profile/members/929?lang=en">Marie-Eve Desrosiers</a>, and Pierre Sosthène Kambidi. 2026. <em>World Development</em> 208.</p>
+<p>In conflict-affected contexts, the presence of armed actors—including state security forces, international peacekeeping missions, and non-state armed groups—means that aid organisations may need to cooperate with these actors to deliver foreign aid. Yet the conditions under which this cooperation happens remain underspecified. In this article, we use novel mixed methods data from the Democratic Republic of the Congo (DRC) to study these conditions. Building on qualitative interviews with Kinshasa-based aid practitioners, as well as a survey and survey experiment with Congolese provincial-level aid workers, we provide systematic evidence of the conditions under which humanitarian and development aid workers are more or less likely to collaborate with different types of armed actors across different regions of the country. We test three hypotheses: the type of armed actor, the visibility of cooperation, and the proximity to conflict. Our findings suggest that the type of armed actor and the proximity of the aid workers to conflict matter most. The public visibility of their collaboration is less important than anticipated. For those at the forefront of aid delivery, it is primarily the concrete realities and day-to-day interactions that appear to shape decision-making and behavior.</p>
+<p><a href="https://doi.org/10.1093/jogss/ogag019"><strong>Leadership Succession and Jihadist Beheadings</strong></a> with <a href="https://www.markberlin2.com/">Mark Berlin</a> and <a href="https://www.ilaydaonder.com/">Ilayda B. Onder</a>. 2026. <em>Journal of Global Security Studies</em> 11 (3).</p>
+<p>Why do armed groups use extreme forms of violence? Existing research argues that ideological beliefs, organizational alliances, and efforts to generate publicity or provoke external enemies drive armed groups’ use of extreme violence. Building on existing scholarship, this study explores the incentives of different types of militant leaders to sanction beheading attacks. Leadership transitions create authority crises within armed groups. We argue that these pressures incentivize successor leaders to employ extreme and costly violence like beheadings as a tool of internal consolidation and external signaling. To examine these arguments, we combine an original dataset on the backgrounds and experiences of 206 leaders of 108 different jihadist groups with event-level data on beheading attacks. In doing so, we find that jihadist organizations are significantly more likely to use beheadings under successor leaders. This effect is pronounced among successors who come to power following the arrest or death of their predecessors at the hands of state forces. However, the use of beheadings under successors decreases as their time in power increases, indicating the diminishing returns of using extreme violence over time. These findings contribute to scholarship on militant leaders, the consequences of counterterrorism policies, and the strategic logic of armed group violence.</p>
+<p><a href="https://doi.org/10.1093/jopres/xjaf016"><strong>Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset (JLD)</strong></a> with <a href="https://www.universiteitleiden.nl/en/staffmembers/maria-amjad">Maria Amjad</a>, <a href="https://www.markberlin2.com/">Mark Berlin</a>, <a href="https://www.hertie-school.org/en/research/faculty-and-researchers/profile/person/daub">Sara Daub</a>, and <a href="https://www.ilaydaonder.com/">Ilayda B. Onder</a> (equal contribution). 2026. <em>Journal of Peace Research</em> 63 (2): 289-297.</p>
+<p>Recent research has explored how militant leaders’ backgrounds shape their decision-making while in power. However, existing studies primarily focus on leaders of rebel groups participating in civil wars, overlooking smaller, yet lethal and influential, armed groups that operate outside civil war contexts. To address this gap, we introduce the Jihadist Leaders Dataset (JLD), which provides original, systematic data on the backgrounds and prewar experiences of 237 leaders from 110 jihadist organizations. The dataset covers organizations operating across Africa, Asia, and the Middle East between 1976 and 2023, capturing a broad range of actors that are central to contemporary conflicts. Drawing on Arabic, English, French, German, Turkish, and Urdu sources, we document biographical information on 31 leader-level variables, offering the potential for analyzing how jihadist leaders’ prior experiences shape their preferences and the behavior of the groups they command. We detail our data collection procedures and present descriptive statistics before illustrating the JLD’s utility through a quantitative analysis of the leader-level determinants of suicide bombings. The JLD advances research on militant leaders, jihadist actors, and the role of individual decision-makers in shaping conflict processes and provides multiple avenues for new research on leader-level explanations of various consequential outcomes in conflict zones, including organizational splintering, tactical choices, and militant alliances.</p>
 <p><a href="https://doi.org/10.1093/isq/sqaf076"><strong>Gender in International Bureacracies: Evidence from UN Field Missions</strong></a> with <a href="https://politics.ubc.ca/profile/katharina-coleman/">Katharina P. Coleman</a>, <a href="https://kseniya-oksamytna.com/">Kseniya Oksamytna</a>, and <a href="https://jdisalvatore.weebly.com/">Jessica Di Salvatore</a>. 2025. <em>International Studies Quarterly</em> 69 (4).</p>
 <p>Contemporary international organizations, including the UN, employ tens of thousands of staff outside of their headquarters in field offices around the world. Despite attempts to promote gender equity, significant differences persist in male and female officials’ experiences of working in UN field offices and missions. Drawing on a series of internal surveys of UN field staff, we demonstrate that, relative to men, women report having worse relationships with peers, supervisors, and management as well as having less confidence in performance appraisal mechanisms. Through a qualitative analysis of survey comments, archival materials, and semi-structured interviews, we highlight distinct gendered dynamics of working in field offices that affect international bureaucrats’ workplace experiences.</p>
 </section>
 <section id="working-papers" class="level2">
 <h2 class="anchored" data-anchor-id="working-papers">Working Papers</h2>
-<section id="armed-group-leaders" class="level3">
-<h3 class="anchored" data-anchor-id="armed-group-leaders">Armed Group Leaders</h3>
-<p><a href="https://www.dropbox.com/scl/fi/fpc07fmqp2au0cp0zere7/Changing_the_Guard.pdf?rlkey=n8hc4xos8ia9knm9z7xzfv89q&amp;st=i5c774ar&amp;dl=0"><strong>Changing the Guard: Rebel Leadership Transitions in Syria</strong></a> – R&amp;R at <em>International Interactions</em></p>
-<p>This paper examines how leadership targeting affects the violent conduct of armed groups during civil war. Armed groups often possess a clear central command that exerts control over the group’s constituent parts, but there is conflicting evidence regarding the role of leaders and how armed groups respond to leadership strikes. I test whether leadership change affects the battlefield efficacy of armed groups using original data on assassination attempts of armed group leaders during the Syrian civil war. I exploit the as-if randomness of the success or failure of assassination attempts as a quasi-experiment to identify the causal effect of rebel leadership targeting on armed group violence. I find that successful assassination attempts result in greater battlefield losses for armed groups. Importantly, successful attempts degrade groups and reduce overall levels of violence in the conflict in the short term. This points to risk aversion as an understudied mechanism in conflicts with multiple armed groups.</p>
-<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5258832"><strong>Leadership Succession and Militant Extra-Lethal Violence</strong></a> with Mark Berlin and Ilayda B. Onder – R&amp;R at <em>Journal of Global Security Studies</em></p>
-<p>Why do armed groups use extreme forms of violence such as beheadings, despite their significant costs? This study argues that leadership transitions create authority crises that incentivize successors to adopt extra-lethal violence as a tool of internal consolidation and external signaling. These pressures are particularly acute for successors with prior leadership experience in other armed groups: having previously lost power, these leaders face additional reputational deficits and are especially likely to view extra-lethal violence as a useful instrument of authority consolidation. Drawing on an original dataset of 206 leaders from 108 jihadist groups active between 1976 and 2023, we find that organizations are significantly more likely to use beheadings under successor leaders than under founders. This effect is most pronounced among those with prior rebel leadership experience. We also find that these patterns are more consistent with successors’ strategic use of beheadings to address short-term authority deficits than with alternative explanations such as ideological extremism, technical skill, transnational network ties, or unsanctioned violence by subordinates. By shifting attention from organizational incentives to leader-level dynamics, this study contributes to research on militant leadership, succession in armed groups, and the strategic logic of extra-lethal violence.</p>
-</section>
 <section id="political-economy-of-armed-groups" class="level3">
 <h3 class="anchored" data-anchor-id="political-economy-of-armed-groups">Political Economy of Armed Groups</h3>
-<p><a href="https://www.dropbox.com/scl/fi/sk47dzusvbs7cvbb4lozv/Armed_Group_Adaptive_Extraction.pdf?rlkey=oy4xgxa8ki4fjbzv34p5fo6gg&amp;st=dbkzsr9a&amp;dl=0"><strong>Armed Group Adaptive Extraction: Evidence from Syria</strong></a> – Under Review</p>
+<p><a href="https://www.dropbox.com/scl/fi/sk47dzusvbs7cvbb4lozv/Armed_Group_Adaptive_Extraction.pdf?rlkey=oy4xgxa8ki4fjbzv34p5fo6gg&amp;st=dbkzsr9a&amp;dl=0"><strong>Adaptive Extraction: Armed Group Governance in Syria</strong></a> – Under Review</p>
 <p>Civil wars are long. Armed groups need revenue to sustain their operations long-term, but we do not understand how they set or change their mix of funding strategies. Existing theory predicts that groups with resources loot to replace lost resource rents or that taxation is ideologically motivated and relatively constant across group territory. Empirically, groups with resources also create institutions and tax, and taxation varies across space. I argue that if revenue from one source declines armed groups will dynamically substitute one funding strategy for another. I test this prediction using a negative oil-price shock in a quasi-experimental design to examine how the Islamic State adapted to declining resource rents. I find that the group levied new, administratively costly taxes as a substitute for lost oil revenue. In contrast, looting did not increase. This demonstrates how groups shift the mix of funding strategies they pursue in response to the strategic environment, and that groups have preferences between different revenue sources.</p>
-<p><a href="https://www.dropbox.com/scl/fi/k185o5n46rrz4z9fmmzh7/Armed_Group_Extraction.pdf?rlkey=aj4qry7n5at1cotvloq10z8w0&amp;st=p6vozco3&amp;dl=0"><strong>Armed Group Extraction Strategies</strong></a> – R&amp;R at <em>Civil Wars</em></p>
-<p>Armed groups require revenue. Groups use a variety of extraction strategies to generate revenue including resource rents, foreign support, smuggling, taxation, and looting. These strategies are often examined in isolation and some existing theory posits that reliance on resource rents precludes groups from developing governance institutions, including tax practices. However, 25 percent of groups use multiple extraction strategies simultaneously, and, empirically, some groups extract both resources and taxes. I argue groups operate in a governance equilibrium and choose the mix of strategies they use based on what will deliver the highest net marginal value. I assess my argument descriptively using a cross-national quantitative design. I find that armed groups use a mix of strategies and that, counterintuitively, extracting resource rents leads groups to increase taxation in the future. Additionally, nearly all the extraction strategies studied lead groups to deepen their governance practices, though significant heterogeneity remains.</p>
 </section>
-<section id="international-organizations" class="level3">
-<h3 class="anchored" data-anchor-id="international-organizations">International Organizations</h3>
-<p><a href="https://www.dropbox.com/scl/fi/xzcn45hpxyi5yl98jmp6w/SecurityActors_2025_SwedlundFWDesrosiers.pdf?rlkey=5olqv4v8yp8hf3gc6praz5sgb&amp;st=4mxcjna0&amp;dl=0"><strong>Armed Aid? Conditions Shaping Cooperation with Armed Actors</strong></a> with Haley Swedlund and Marie-Eve Desrosiers – R&amp;R at <em>World Development</em></p>
-<p>Foreign aid organizations have long been known to be reluctant to work with armed actors for fear of undermining perceptions of neutrality and increasing risks to their staff. Yet, foreign aid is a critical lifeline for the more than two billion people living in conflict- affected countries. In such contexts, the surrounding instability means that aid actors regularly encounter armed actors such as national military and police forces, international peacekeeping forces, and local armed groups and paramilitaries. When are aid workers willing to work with security actors such as national armies, militia groups, and international peacekeeping forces? In this article, we theorize that engagement with armed actors is not just about normative principles but about concrete realities on the ground. We hypothesize that three key factors influence aid practitioners’ willingness to work with armed actors: the type of armed actor involved, whether cooperation is visible or not, and aid workers’ relative proximity to conflict. We test our hypotheses using semi-structured interviews of aid practitioners in Kinshasa (N=66) and a survey of primarily Congolese aid workers in three conflict-affected provinces in the Democratic Republic of the Congo (N=132). Our data shows that the type of armed actor is a significant factor in the willingness to cooperate, but visibility is not as crucial as anticipated. We also find compelling evidence that the barriers to working with even the most controversial armed actors soften in spaces where conflict and instability are most proximate.</p>
+<section id="international-organizations-aid-and-foreign-policy" class="level3">
+<h3 class="anchored" data-anchor-id="international-organizations-aid-and-foreign-policy">International Organizations, Aid, and Foreign Policy</h3>
+<p><strong>Ambassadors and Field-Level Diplomacy: French Missions in Africa (1960–1996)</strong> with Haley Swedlund, Michal Mochtak, and Nada Afa – Under Review</p>
+<p>Does the scope for discretion for ambassadors vary across substantive issue areas? In this article, we examine how the informational and organizational conditions of different issue areas shape the discretion of field-level diplomats vis-`a-vis their principals. Using original data from the French diplomatic archives, we analyze end-of-mission reports from French missions across Africa across more than three decades, comparing how ambassadors write about economic issues, security concerns, and French cultural programs. We use large language models to classify paragraphs by type before ranking them along three dimensions with a novel tournament design and a Bradley-Terry model that assigns latent scores for formality, neutrality, and precision to over 14,000 paragraphs of interest. We show that ambassadors vary their linguistic style and emphasis across issue areas within the same reports, indicating that professional discretion is not uniform but issue dependent. Economic reporting, which headquarters can most readily standardize and verify, is the most formal, neutral, and precise. Cultural and security reporting, both of which depend on locally grounded judgment, are markedly less so and produce stronger between-ambassador effects. Discretion, we argue, is shaped less by how much principals care about an issue than by how far effective reporting on it requires judgment that headquarters can neither substitute nor evaluate.</p>
+<p><strong>When are Aid Suspension Threats Credible? Evidence from a Global Elite Survey</strong> with Haley Swedlund, Samantha Custer, and Ana Horigoshi – Under Review</p>
+<p>When coercive threats are effective, there may be no punishment to observe. As a result, observed sanctions tell us relatively little about when targets expect senders to follow-through with threats. Aid suspensions are a useful setting for studying this problem because donors control the threatened resource, yet recipients may still doubt whether they will bear the costs of withholding it. In this article, we test theory on when aid suspension threats are perceived as credible using an original survey experiment with 1,455 global elites working in international development and related fields; 89% of our sample are citizens of aid-receiving countries. We find that the type of transgression strongly influences perceived credibility. Threats following military coups or embezzlement are viewed as far more credible than threats related to election irregularities or human rights abuses. In contrast, prior beliefs about aid, prior exposure to aid suspensions, and recipient access to alternative funding from China do not affect the perceived credibility of aid suspensions, but do shape personal support for aid suspensions. These findings shift attention from donor decisions about when to suspend aid to recipient expectations about when enforcement is likely.</p>
 </section>
 </section>
 <section id="work-in-progress" class="level2">
 <h2 class="anchored" data-anchor-id="work-in-progress">Work in Progress</h2>
-<p><strong>Diplomat Heterogeneity: Changing French Diplomacy in Africa</strong> with Haley Swedlund and Nada Afa – Revising for Special Issue Submission</p>
-<p>States post field-level diplomats all over the world, investing in their recruitment and training, facilities, and in monitoring their activities. However, despite growing academic attention to whether and how foreign policy elites influence political and economic outcomes, little is known about the impact of field-level diplomats. Under what conditions do field-level diplomats have influence and when are they constrained? We examine this question by studying private, diplomatic reporting. One of the primary ways field-level diplomats exercise their individual agency and influence international politics is through their reporting to central governments. Via their reporting, diplomats can shape how their host country is portrayed in the sending government’s foreign policy discussions by, for example, strategically selecting what to highlight or using particular language to describe key events.</p>
-<p>We argue that diplomats have more individual agency in contexts where there is less central government oversight and issues are less clearly defined. Using a principal-agent framework, we theorize that when central government communication is more costly they focus on some priority areas over others, creating variation in oversight of different issue areas. We analyze this relationship using over 6,500 pages of end-of-mission reports written by French diplomats from missions across Africa from 1960 to 1996. These end-of-mission reports are written by French ambassadors at the end of their tenure and reflect their personal observations on their time in the country. Ambassadors are specifically asked to structure their analysis according to three key foreign policy areas, economic policy, security policy, and cultural policy, but are given wide latitude in how they discuss these issues. Importantly, these are confidential foreign policy documents intended for internal use.</p>
-<p>We analyze how these documents vary in two key ways: First, using a supervised learning, natural language processing model combined with these archival data and individual-level data on ambassadorial postings, we assess within end-of-mission report variation by foreign policy priority. This helps explain individual-level variation across issue areas and highlights how cultural policy, which is less precisely defined than security policy, allows for more diplomatic agency. Second, we examine whether changing communications technology reduces the monitoring costs of governments, the principals, to oversee and provide instructions to their agents, field-diplomats. As the cost of communication decreased due to the introduction of the electronic cable, central governments could exercise more oversight over more issue areas, reducing diplomats’ agency on trade and cultural issues. To identify the effect of electronic cables, we explore the change in matched reports written by the same ambassador before and after the technology shock.</p>
-<p><strong>When are Aid Suspension Threats Credible? Evidence from a Global Elite Survey</strong> with Haley Swedlund, Samantha Custer, and Ana Horigoshi – Pre-analysis Plan Registered, Revising for Submission</p>
-<p>Threats to suspend foreign aid are among the strongest tools international donors have to signal disapproval and induce policy change. Yet, threats to suspend aid are only effective if recipient governments perceive them as credible. Existing explanations of aid suspensions emphasize the strategic interest of donors, but these approaches cannot explain why donors suspend aid to strategically important partners, or refrain from suspending aid to unaligned states. This article develops and tests a theory of the perceived credibility of aid suspension threats among global elites. We argue that credibility perceptions depend on the salience of the recipient’s transgression for donor domestic constituencies. We test our hypotheses using an original survey experiment with 1,901 elites working in international development across the Global North and South. We find that the type of transgression strongly shapes perceived credibility: threats following military coups or embezzlement are viewed as far more credible than those related to election irregularities or human rights abuses. In contrast, prior beliefs and exposure to aid suspensions as well as recipient access to alternative funding&nbsp;do not affect elites’ assessments of credibility. Our findings advance theories of signaling and bargaining in international relations by shifting the focus from donor decisions to the perceptions of global elites who interpret and anticipate those decisions.</p>
 <p><strong>The Targeting of Civilian Infrastructure and Rebel Governance</strong> with Regine Schwab – Revising for Submission</p>
-<p>The strategic consequences of wartime civilian harm continue to be debated. However, the literature has focused primarily on direct civilian targeting. How do government attacks on civilian infrastructure, such as food and healthcare provision, impact rebel behavior? And are there differences between rebels who govern civilians and those who do not? We develop a theory explaining how governing rebel groups respond to government targeting of civilian infrastructure. Following such attacks, governing rebels should be more likely to escalate their fighting activities than non-governing rebels. We argue that this is explained by the fact that governing groups face higher costs from the people they govern for not responding to infrastructure attacks. The argument is tested quantitatively with a difference-in-differences design using new data on the targeting of civilian infrastructure and rebel governance in the Syrian civil war. We find that armed groups that govern respond with more violence than groups which do not govern to strikes against hospitals. The results have important implications for the effects of state-led violence and the strength of legal norms protecting noncombatants.</p>
-<p><strong>Rebel Leadership, Military Experience, and Leader Selection</strong> – Revising for Submission</p>
-<p>This paper assesses whether findings on the role of state leaders’ military and combat experience extend to armed groups. Through a cross-national analysis of armed group leaders, I demonstrate that leader selection practices, particularly whether a leader founded the group, condition the effect of a leader’s combat experience on group structure and attacks. The heterogenous effects of leader selection extend to published work on armed group leaders, highlighting the need to include selection processes in theories on the relationship between leaders and group behavior.</p>
+<p>Civilians are frequent targets in armed conflicts. However, the literature on violence against civilians focuses primarily on direct civilian casualties and overlooks a broader analytically-distinct phenomenon: the targeting of civilian infrastructure. We argue that attacks on the built environment enabling the provision of healthcare, energy, water, food, education, and the movement of goods and people are not simply a variant of violence against civilians but a distinct strategy that exploits the dual-use nature of such infrastructure to target civilians and enemy belligerents simultaneously. Because rebels and the civilian population they operate among frequently draw on the same wells, clinics, and markets, attacking this infrastructure lets perpetrators pursue punishment and denial at once; undermining civilian welfare while degrading rebels’ capacity to feed, fund, recover, and ultimately fight. We expect rebel groups to military respond to infrastructure attacks, and we test our argument with a difference-in-differences design using data on the targeting of civilian infrastructure in the Syrian civil war. We find that rebels respond quickly proximate to infrastructure strikes, but that groups which govern do not respond more than groups that do not govern. However, governing groups respond differently, exhibiting greater military capacity.</p>
+<p><strong>Under the Veil of Secrecy: Racism and Paternalism in French Diplomatic Reporting</strong> with Haley Sedlund and Michal Mochtak – Registered Report Drafted</p>
+<p>We analyze the persistence of colonial, racist, and paternalistic language in French diplomatic writing over more than 50 years. Our goal is to examine the prevalence of such language in French diplomatic reporting over time, across contexts, and among individual ambassadors. To achieve this, we examine all end-of-mission reports written by French ambassadors stationed in four regions — Sub-Saharan Africa, Latin America and the Caribbean, North Africa and the Middle East, and Asia and Southeast Asia — between 1945 and the mid-1990s using computational text analysis. Unlike prior approaches to identifying racist sentiment in especially social media data, we propose using a randomized tournament setup based on pairwise comparisons of short text sentiments. This setup allows us to better capture the nuanced power dynamics inherent in diplomatic writing. We analyze our hypotheses in a series of linear models to parse the effects of time trends, local context, and individual ambassadors.</p>
+<p><strong>Leader Backgrounds and Rebel Social Services</strong> with Ilayda B. Onder, Mark Berlin, and Muge Acarlar – Revising for Submission</p>
+<p>Previous research has shown that jihadist insurgent groups are more likely than their secular counterparts to provide social services to civilians. Yet service provision varies widely within this ideological family. Some organizations build schools and clinics while others never do, and the same organization’s provision changes over time. Stable organizational attributes such as ideology, territorial control, and resources fall short of explaining this variation. We advance a leader-centered explanation. Leaders govern with the repertoires they acquire before taking power. Specifically, leaders whose civilian careers were spent in governance-related professions (e.g., education, religious instruction and adjudication, medicine, public administration, politics) bring beliefs, skills, and social networks that make service provision feasible and valuable. In contrast, leaders who spent time in direct combat bring repertoires oriented toward discipline, security, and coercion, in which services for civilians are peripheral. We therefore expect organizations to become more likely to provide services after governance-background leaders assume power, and less likely after combat-experienced leaders do. We test these expectations using original data on the backgrounds of 237 leaders of 110 jihadist organizations operating across Africa, Asia, and the Middle East between 1976 and 2023, combined with new data on these organizations’ provision of healthcare and education. Staggered difference-in-differences estimates support both expectations, and matched-sample analyses address the possibility that particular organizations select particular kinds of leaders. This study enhances our understanding of rebel governance by shifting the explanatory focus from what armed organizations are to who leads them.</p>
 
 
 </section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
     }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
       return false;
     }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -584,185 +625,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 
 

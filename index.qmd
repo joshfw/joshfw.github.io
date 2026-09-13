@@ -21,21 +21,21 @@ about:
       href: https://www.linkedin.com/in/joshua-fawcett-weiner-21542b58
     - icon: fa-envelope
       text: Email
-      href: mailto:j.weiner@alumni.ubc.ca
+      href: mailto:joshua.weiner@tse-fr.eu
     - text: CV
-      href: https://www.dropbox.com/scl/fi/447e1t1a3c62crhqtkuw1/CV_JFawcettWeiner.pdf?rlkey=8b4qhk9jwphedg7ij2na0qr4b&st=yq8ocr62&dl=0
+      href: https://www.dropbox.com/scl/fi/as0v9bjp7zer3l1nac2qm/CV_JFawcettWeiner.pdf?rlkey=r6917lcqs9xs6fczc575c9c4d&st=lpp3igyc&dl=0
 ---
 
 ::: {#hero-heading}
 ## About 
 
-I'm a Postdoctoral Fellow at the Centre for International Conflict - Analysis and Management [(CICAM)](https://www.ru.nl/cicam/) at Radboud University's [Department of Political Science](https://www.ru.nl/en/departments/nijmegen-school-of-management/political-science) and an incoming Research Fellow at the [Institute for Advanced Study in Toulouse](https://www.iast.fr/) at the Toulouse School of Economics. I received my Ph.D. in [Political Science](https://politics.ubc.ca/) from the University of British Columbia (UBC) in January 2024. Previously, I was a [Civil War Paths Fellow](https://www.civilwarpaths.org/) at the University of York's Centre for the Comparative Study of Civil War. My work has been published or is forthcoming at *International Studies Quarterly* and the *Journal of Peace Research*. 
+I'm a Postdoctoral Research Fellow at the [Institute for Advanced Study in Toulouse](https://www.iast.fr/people/joshua-weiner) at the [Toulouse School of Economics](https://www.tse-fr.eu/). Previously, I was a Postdoctoral Fellow at the Centre for International Conflict - Analysis and Management [(CICAM)](https://www.ru.nl/cicam/) at Radboud University's [Department of Political Science](https://www.ru.nl/en/departments/nijmegen-school-of-management/political-science) and a [Civil War Paths Fellow](https://www.civilwarpaths.org/) at the University of York's Centre for the Comparative Study of Civil War. I received my Ph.D. in [Political Science](https://politics.ubc.ca/) from the University of British Columbia (UBC) in 2024. My work has been published or is forthcoming in *World Development*, *Journal of Peace Research*, *International Studies Quarterly*, *Journal of Global Security Studies*, and *Civil Wars*.
 
-My research sits at the intersection of international relations and comparative politics. In one stream of research, I study the political economy of nonstate armed groups and the role of armed group leaders during civil conflict. My substantive focus is on the political economy of armed group adaptation and the impact of armed group leaders on organizational behavior. Much of my research is driven by two related questions: 1) how do armed groups determine the mix of funding strategies they use during conflict; and 2) how do armed group leaders, because of their past experiences or through networks, shape conflict dynamics.
+My research sits at the intersection of international relations and comparative politics. Much of my work is on the political economy of civil war and political violence, where I study questions related to armed group behavior, rebel governance, armed group leaders, and conflict dynamics. Questions currently motivating my work include: 1) how do armed group funding strategies impact group behavior and governance; and 2) how do armed groups adapt during long conflicts. 
 
-In another stream of research, I examine the conditions under which individuals working in international organizations (IOs) are able to affect foreign policy and development outcomes and when they are constrained by their institutional context. Across both research agendas, I have collected original observational, survey, and archival data, and I employ a variety of methods in my own and coauthored work including quasi-experiments, time series analysis, survey experiments, and text as data approaches. Geographically, I concentrate on the Global South, specifically the Middle East and Africa.
+In another stream of research, I am a coauthor on multiple research papers and projects that analyze the internal dynamics of international organizations (IOs), aid agencies, and foreign policy bureaucracies. Across both research agendas, I have collected original observational, survey, and archival data, and I employ a variety of methods in my own and coauthored work including quasi-experiments, survey experiments, and text as data approaches. Geographically, I concentrate on the Global South, specifically the Middle East and Africa.
 
-I have received generous financial support from the Netherlands' [Dutch Research Council (NWO)](https://www.nwo.nl/en/researchprogrammes/open-competition-ssh) Canada's [Social Sciences and Humanities Research Council (SSHRC)](https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSD-BESCD_eng.asp), UBC, and York University.
+My research has been funded by the Netherlands' [Dutch Research Council (NWO)](https://www.nwo.nl/en/researchprogrammes/open-competition-ssh) and Canada's [Social Sciences and Humanities Research Council (SSHRC)](https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSD-BESCD_eng.asp).
 
-Feel free to contact me at [j.weiner\@alumni.ubc.ca](mailto:j.weiner@alumni.ubc.ca) for more information about my research or teaching.
+Feel free to contact me at [joshua.weiner\@tse-fr.eu](mailto:joshua.weiner@tse-fr.eu) for more information about my research or teaching.
 :::
